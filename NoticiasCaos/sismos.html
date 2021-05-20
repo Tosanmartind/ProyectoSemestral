@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sismos</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/misestilos.css">
+    <link rel="icon" href="img/Logo2.jpeg">
 </head>
 <body>
     <div class="container-fluid">
@@ -74,14 +76,17 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <form>
+                        <form id="form1">
                           <div class="form-group">
-                            <label for="exampleInputUsuario">Nombre de Usuario</label>
-                            <input type="email" class="form-control" id="exampleInputUsuario" aria-describedby="UsuarioHelp" placeholder="Ingrese Nombre De Usuario">
+                            <label for="inicio-correo">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="inicio-correo" aria-describedby="UsuarioHelp"
+                              placeholder="Ingrese su correo">
+                            <span id="error-usuario" class="error"></span>
                           </div>
                           <div class="form-group">
-                            <label for="exampleInputPassword1">Ingrese Contraseña</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="**********">
+                            <label for="inicio-pswd">Ingrese Contraseña</label>
+                            <input type="password" class="form-control" id="inicio-pswd" placeholder="**********">
+                            <span id="error-inicio-pswd" class="error"></span>
                           </div>
                           <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -110,19 +115,33 @@
                       <div class="modal-body">
                         <form>
                           <div class="form-group">
-                            <label for="exampleInputUsuario">Nombre de Usuario</label>
-                            <input type="email" class="form-control" id="exampleInputUsuario" aria-describedby="UsuarioHelp" placeholder="Ingrese Nombre De Usuario">
+                            <label for="rgtro-usuario">Nombre de Usuario</label>
+                            <input type="email" class="form-control" id="rgtro-usuario" aria-describedby="UsuarioHelp"
+                              placeholder="Ingrese Nombre De Usuario">
+                            <span id="error-rgtro-usuario" class="error"></span>
                           </div>
                           <div class="form-group">
-                            <label for="exampleInputEmail1">Dirección de Correo</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese Correo Electronico">
+                            <label for="rgtro-correo">Dirección de Correo</label>
+                            <input type="email" class="form-control" id="rgtro-correo" aria-describedby="emailHelp"
+                              placeholder="Ingrese Correo Electronico">
+                            <span id="error-rgtro-correo" class="error"></span>
                           </div>
                           <div class="form-group">
-                            <label for="exampleInputPassword1">Contraseña</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="**********">
+                            <label for="pswd-rgtro">Contraseña</label>
+                            <input type="password" class="form-control" id="pswd-rgtro" placeholder="**********">
+                            <div id="pswd-inf-rgtro">
+                              <h4>La contraseña debe tener las siguientes características</h4>
+                              <ul class="password-list">
+                                <li id="letter-rgtro" class="invalid">Al menos <strong>una letra</strong></li>
+                                <li id="capital-rgtro" class="invalid">Al menos <strong>una letra mayúscula</strong></li>
+                                <li id="number-rgtro" class="invalid">Al menos <strong>un número</strong></li>
+                                <li id="length-rgtro" class="invalid">Debe tener <strong>8 caracteres</strong></li>
+                              </ul>
+                            </div>
                           </div>
-                          <button type="submit" class="btn btn-primary">Registrarme</button>
-                        </form>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Registrarme</button>
+                      </form>
                       </div>
                     </div>
                   </div>

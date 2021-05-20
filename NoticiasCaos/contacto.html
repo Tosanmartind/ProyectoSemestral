@@ -82,7 +82,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                <form>
+                <form id="form1">
                   <div class="form-group">
                     <label for="inicio-correo">Correo Electrónico</label>
                     <input type="email" class="form-control" id="inicio-correo" aria-describedby="UsuarioHelp"
@@ -92,15 +92,7 @@
                   <div class="form-group">
                     <label for="inicio-pswd">Ingrese Contraseña</label>
                     <input type="password" class="form-control" id="inicio-pswd" placeholder="**********">
-                    <div id="pswd-inf-usuario">
-                      <h4>La contraseña debe tener las siguientes características</h4>
-                      <ul class="password-list">
-                        <li id="letter" class="invalid">Al menos <strong>una letra</strong></li>
-                        <li id="capital" class="invalid">Al menos <strong>una letra mayúscula</strong></li>
-                        <li id="number" class="invalid">Al menos <strong>un número</strong></li>
-                        <li id="length" class="invalid">Debe tener <strong>8 caracteres</strong></li>
-                      </ul>
-                    </div>
+                    <span id="error-inicio-pswd" class="error"></span>
                   </div>
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
