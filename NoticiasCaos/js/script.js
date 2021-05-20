@@ -18,29 +18,29 @@ $(document).ready(function () {
         $("#error-usuario").fadeOut()
     });
     //Validación contraseña
-    
-    $("#form1").submit(function(){
+
+    $("#form1").submit(function () {
         console.log("Submit")
 
         var pass = $("#inicio-pswd").val()
 
-        if(pass.length < 8 ){
+        if (pass.length < 8) {
             $("#error-inicio-pswd").html("Contraseña debe tener 8 caracteres")
             event.preventDefault()
         }
-    
-   
+
+
     });
     //VALIDACIONES REGISTRO
 
 
-     //VALIDACIÓN REGISTRO USUARIO
+    //VALIDACIÓN REGISTRO USUARIO
     $("#error-rgtro-usuario").hide()
 
     $("#rgtro-usuario").blur(function () {
         console.log("rgtro-usuario perdió el foco")
 
-       
+
         if ($("#rgtro-usuario").val().length < 3) {
             $("#error-rgtro-usuario").html("Nombre debe ser mayor a 2 caracteres")
             $("#error-rgtro-usuario").fadeIn()
@@ -120,18 +120,25 @@ $(document).ready(function () {
     $("#nombre-contacto").blur(function () {
         console.log("nombre-contacto perdió el foco")
 
-       
-        if ($("#nombre-contacto").val().length < 3) {
-            $("#error-nombre-contacto").html("Nombre debe ser mayor a 2 caracteres")
+
+        if ($("#nombre-contacto").val().length < 6) {
+            $("#error-nombre-contacto").html("Nombre debe ser mayor a 6 caracteres")
             $("#error-nombre-contacto").fadeIn()
         }
 
 
     });
 
+    $("#nombre-contacto").focus(function () {
+        console.log("nombre-contacto ganó el foco")
+        $("#error-nombre-contacto").fadeOut()
+    });
 
 
-    //VALIDACIÓN CORREO CONTACTO
+
+
+
+
     $("#error-correo-contacto").hide()
 
     $("#correo-contacto").blur(function () {
@@ -145,10 +152,24 @@ $(document).ready(function () {
 
 
     });
+    $("#correo-contacto").focus(function () {
+        console.log("correo-contacto ganó el foco")
+        $("#error-correo-contacto").fadeOut()
+
+    });
+    //VALIDACIÓN CONSULTA-RECLAMO
+    $("#form2").submit(function () {
+        console.log("Submit")
+
+        var text = $("#consulta").val()
+
+        if (text.length < 50) {
+            $("#error-consulta").html("Debe tener más de 50 caracteres")
+            event.preventDefault()
+        }
 
 
-
-
+    });
 
 
 });
