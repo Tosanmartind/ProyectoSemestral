@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto</title>
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/misestilos.css">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/script.js"></script>
+
 </head>
 
 <body>
@@ -76,13 +80,23 @@
               <div class="modal-body">
                 <form>
                   <div class="form-group">
-                    <label for="exampleInputUsuario">Nombre de Usuario</label>
-                    <input type="email" class="form-control" id="exampleInputUsuario" aria-describedby="UsuarioHelp"
-                      placeholder="Ingrese Nombre De Usuario">
+                    <label for="inicio-correo">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="inicio-correo" aria-describedby="UsuarioHelp"
+                      placeholder="Ingrese su correo">
+                    <span id="error-usuario" class="error"></span>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Ingrese Contraseña</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="**********">
+                    <label for="inicio-pswd">Ingrese Contraseña</label>
+                    <input type="password" class="form-control" id="inicio-pswd" placeholder="**********">
+                    <div id="pswd-inf-usuario">
+                      <h4>La contraseña debe tener las siguientes características</h4>
+                      <ul class="password-list">
+                        <li id="letter" class="invalid">Al menos <strong>una letra</strong></li>
+                        <li id="capital" class="invalid">Al menos <strong>una letra mayúscula</strong></li>
+                        <li id="number" class="invalid">Al menos <strong>un número</strong></li>
+                        <li id="length" class="invalid">Debe tener <strong>8 caracteres</strong></li>
+                      </ul>
+                    </div>
                   </div>
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -113,35 +127,48 @@
               <div class="modal-body">
                 <form>
                   <div class="form-group">
-                    <label for="exampleInputUsuario">Nombre de Usuario</label>
-                    <input type="email" class="form-control" id="exampleInputUsuario" aria-describedby="UsuarioHelp"
+                    <label for="rgtro-usuario">Nombre de Usuario</label>
+                    <input type="email" class="form-control" id="rgtro-usuario" aria-describedby="UsuarioHelp"
                       placeholder="Ingrese Nombre De Usuario">
+                    <span id="error-rgtro-usuario" class="error"></span>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Dirección de Correo</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    <label for="rgtro-correo">Dirección de Correo</label>
+                    <input type="email" class="form-control" id="rgtro-correo" aria-describedby="emailHelp"
                       placeholder="Ingrese Correo Electronico">
+                    <span id="error-rgtro-correo" class="error"></span>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Contraseña</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="**********">
+                    <label for="pswd-rgtro">Contraseña</label>
+                    <input type="password" class="form-control" id="pswd-rgtro" placeholder="**********">
+                    <div id="pswd-inf-rgtro">
+                      <h4>La contraseña debe tener las siguientes características</h4>
+                      <ul class="password-list">
+                        <li id="letter-rgtro" class="invalid">Al menos <strong>una letra</strong></li>
+                        <li id="capital-rgtro" class="invalid">Al menos <strong>una letra mayúscula</strong></li>
+                        <li id="number-rgtro" class="invalid">Al menos <strong>un número</strong></li>
+                        <li id="length-rgtro" class="invalid">Debe tener <strong>8 caracteres</strong></li>
+                      </ul>
+                    </div>
                   </div>
-                  <button type="submit" class="btn btn-primary">Registrarme</button>
-                </form>
               </div>
+              <button type="submit" class="btn btn-primary">Registrarme</button>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-1"></div>
-      <div class="col-8">
-        <h1>Contactanos</h1>
-        <hr>
-      </div>
-
+  </div>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-8">
+      <h1>Contactanos</h1>
+      <hr>
     </div>
+
+  </div>
+  <form>
     <div class="row">
       <div class="col-1"></div>
       <div class="col-4">
@@ -149,18 +176,20 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="">Nombre Completo</span>
           </div>
-          <input type="text" class="form-control">
-
+          <input type="text" id="nombre-contacto" class="form-control">
         </div>
-        <p></p>
+        <hr>
+        <span id="error-nombre-contacto" class="error-contacto"></span>
+        <hr>
         <div class="input-group-prepend">
           <div class="input-group-prepend">
             <span class="input-group-text" id="">Correo Electronico</span>
           </div>
-          <input type="text" class="form-control">
-
+          <input type="text" id="correo-contacto" class="form-control">
         </div>
-        <p></p>
+        <hr>
+        <span id="error-correo-contacto" class="error-contacto"></span>
+        <hr>
       </div>
     </div>
     <div class="row">
@@ -170,7 +199,8 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="">Consulta, Reclamo O Sugerencia</span>
           </div>
-          <input type="text" class="form-control">
+          <input type="text" id="consulta" class="form-control">
+          <span id="error-consulta" class="error-contacto"></span>
           <p></p>
         </div>
 
@@ -183,6 +213,8 @@
         <button type="button" class="btn btn-outline-primary">Enviar</button>
       </div>
     </div>
+
+  </form>
   </div>
   </div>
 

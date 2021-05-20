@@ -1,164 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.css" > 
-    <link rel="stylesheet" href="css/misestilos.css" >    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/misestilos.css">
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/script.js"></script>
 </head>
+
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4 "> 
-                <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
-                  <nav class="navbar navbar-light bg-light">
-                    <a class="navbar-brand" href="#">
-                      <img src="img/Logo2.jpeg" width="80" height="80" alt="">
-                    </a>
-                  </nav>  
-                  <a class="navbar-brand" href="#">Caos News</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                          <a class="nav-link" href="contacto.html">Contacto<span class="sr-only">(current)</span></a>
-                        </li>
-                      </ul>
-            
-                      
-                    </div>
-                  </nav>
-            </div>
-            <div class="col-4"></div>
-            <div class="col-4 ">
-                <div class="input-group ">
-                    <input type="text" class="form-control my-2 my-lg-0" aria-label="Text input with dropdown button">
-                    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar Por</button>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Palabra Clave
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Categoría</a>
-                          <a class="dropdown-item" href="#">Periodista</a>
-                        </div>
-                      </div>
-                    </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4 ">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+          <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+              <img src="img/Logo2.jpeg" width="80" height="80" alt="">
+            </a>
+          </nav>
+          <a class="navbar-brand" href="#">Caos News</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                  </div>
-            </div>
-            <div class="row">
-              <div class="col-10"></div>
-              <div class="col-1">
-                <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#exampleModalCenter" >Iniciar Sesión</button>
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Inicio De Sesión</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <form>
-                          <div class="form-group">
-                            <label for="exampleInputUsuario">Nombre de Usuario</label>
-                            <input type="email" class="form-control" id="exampleInputUsuario" aria-describedby="UsuarioHelp" placeholder="Ingrese Nombre De Usuario">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputPassword1">Ingrese Contraseña</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="**********">
-                          </div>
-                          <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
-                          </div>
-                          <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="contacto.html">Contacto<span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
 
-              </div>
-              <div class="col-1">
-                <button type="button" class="btn btn-primary btn " data-toggle="modal" data-target="#Registro" >Registrarse</button>
 
-                <div class="modal fade" id="Registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Registro</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <form>
-                          <div class="form-group">
-                            <label for="exampleInputUsuario">Nombre de Usuario</label>
-                            <input type="email" class="form-control" id="exampleInputUsuario" aria-describedby="UsuarioHelp" placeholder="Ingrese Nombre De Usuario">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputEmail1">Dirección de Correo</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese Correo Electronico">
-                          </div>
-                          <div class="form-group">
-                            <label for="exampleInputPassword1">Contraseña</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="**********">
-                          </div>
-                          <button type="submit" class="btn btn-primary">Registrarme</button>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </nav>
+      </div>
+      <div class="col-4"></div>
+      <div class="col-4 ">
+        <div class="input-group ">
+          <input type="text" class="form-control my-2 my-lg-0" aria-label="Text input with dropdown button">
+          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Buscar Por</button>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Palabra Clave
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Categoría</a>
+              <a class="dropdown-item" href="#">Periodista</a>
             </div>
-            <div class="row">
-                <div class="col-1">
-                </div>
-                <div class="col-4">
-                    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempore odio, pariatur aperiam sint voluptates.</h1>
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, beatae!</h2>
-                    
-                    <h5><small>Escrito Por: Peter Rock</small></h5>
-                    <h5><small>Fecha: 24/03/2000</small></h5>
-                    <h5><small>Ubicación: Viña Del Mar</small></h5>
-                    <h5><small>Categoría: Deportes</small></h5>
-                </div>
-                <div class="col-6">
-                    
-                    <img src="https://picsum.photos/id/240/860/500" class="img-fluid float-sm-right" alt="...">
-                </div>      
-                </div>
-            <div class="row">
-             <hr style="width: 100%;"> 
-            </div>
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet assumenda pariatur debitis ullam atque est, quam, aliquid voluptates, alias soluta voluptate! Laboriosam, maxime quia. Magni odio voluptates sunt in quae.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sunt laboriosam incidunt aut animi fuga aperiam officia asperiores, quaerat dignissimos est, velit accusantium qui, nam optio? Deserunt sequi excepturi quis, minima corporis modi culpa ipsum velit necessitatibus explicabo molestias! Repudiandae debitis molestiae dicta autem, architecto expedita error nihil laborum veniam magnam aliquam deserunt, sint voluptate? Adipisci soluta dicta hic vitae minima autem repudiandae ea dignissimos, vero debitis, obcaecati, omnis corrupti repellendus voluptates similique! Mollitia delectus quam non, dolor, necessitatibus pariatur tenetur porro, ea eaque maiores repellendus voluptas iusto consequuntur deserunt reiciendis sapiente. Quia atque ad repudiandae, porro facere rerum voluptatibus.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet eum ab, similique, inventore consequatur deleniti id voluptatum culpa dolores autem accusamus deserunt saepe exercitationem cumque assumenda? In earum amet, necessitatibus nesciunt impedit dolores voluptatibus neque corporis saepe? Maiores quod, quia sit itaque expedita sunt cumque eaque impedit consequuntur cum alias ipsam pariatur eos eveniet iure facere debitis, architecto distinctio iste dolore ut. Sed nihil molestiae sapiente optio sunt reprehenderit dolore necessitatibus, nam fugiat sequi consequuntur perspiciatis recusandae laboriosam inventore aut doloremque debitis voluptatem! Nemo, maxime quis accusantium nam eaque quam architecto culpa odit est ex voluptatibus explicabo doloremque ea fugit obcaecati delectus omnis sed modi quae non minima eligendi corrupti! Vero consequuntur fugit ut voluptas pariatur facilis! Doloribus molestiae quo quod voluptate, ullam dolores aliquid vitae, expedita laboriosam ut hic reiciendis provident molestias officia nam impedit nemo velit sequi. Laudantium fugit vel repellendus nihil sit qui repudiandae culpa perferendis alias, porro eveniet facere quibusdam iste facilis? Praesentium, eos saepe. Fuga aliquam reprehenderit odio consequuntur tenetur, enim cum, consequatur ratione asperiores vitae quia ad dolore. Minima consectetur voluptatum ea officia! Vel illo dolorem omnis dicta nobis ex, quis dignissimos veniam et error illum, doloribus nesciunt atque maiores amet velit modi!</p>
-                </div>
-                <div class="col-2"></div>
-            </div>    
-            </div>
+          </div>
         </div>
-    </div>
 
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.js"></script>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10"></div>
+      <div class="col-1">
+        <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#exampleModalCenter">Iniciar
+          Sesión</button>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Inicio De Sesión</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="form1">
+                  <div class="form-group">
+                    <label for="inicio-correo">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="inicio-correo" aria-describedby="UsuarioHelp"
+                      placeholder="Ingrese su correo">
+                    <span id="error-usuario" class="error"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="inicio-pswd">Ingrese Contraseña</label>
+                    <input type="password" class="form-control" id="inicio-pswd" placeholder="**********">
+                    <span id="error-inicio-pswd" class="error"></span>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-1">
+        <button type="button" class="btn btn-primary btn " data-toggle="modal"
+          data-target="#Registro">Registrarse</button>
+
+        <div class="modal fade" id="Registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Registro</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="rgtro-usuario">Nombre de Usuario</label>
+                    <input type="email" class="form-control" id="rgtro-usuario" aria-describedby="UsuarioHelp"
+                      placeholder="Ingrese Nombre De Usuario">
+                    <span id="error-rgtro-usuario" class="error"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="rgtro-correo">Dirección de Correo</label>
+                    <input type="email" class="form-control" id="rgtro-correo" aria-describedby="emailHelp"
+                      placeholder="Ingrese Correo Electronico">
+                    <span id="error-rgtro-correo" class="error"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="pswd-rgtro">Contraseña</label>
+                    <input type="password" class="form-control" id="pswd-rgtro" placeholder="**********">
+                    <div id="pswd-inf-rgtro">
+                      <h4>La contraseña debe tener las siguientes características</h4>
+                      <ul class="password-list">
+                        <li id="letter-rgtro" class="invalid">Al menos <strong>una letra</strong></li>
+                        <li id="capital-rgtro" class="invalid">Al menos <strong>una letra mayúscula</strong></li>
+                        <li id="number-rgtro" class="invalid">Al menos <strong>un número</strong></li>
+                        <li id="length-rgtro" class="invalid">Debe tener <strong>8 caracteres</strong></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Registrarme</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1">
+      </div>
+      <div class="col-4">
+        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempore odio, pariatur aperiam sint
+          voluptates.</h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, beatae!</h2>
+
+        <h5><small>Escrito Por: Peter Rock</small></h5>
+        <h5><small>Fecha: 24/03/2000</small></h5>
+        <h5><small>Ubicación: Viña Del Mar</small></h5>
+        <h5><small>Categoría: Deportes</small></h5>
+      </div>
+      <div class="col-6">
+
+        <img src="https://picsum.photos/id/239/860/500" class="img-fluid float-sm-right" alt="...">
+      </div>
+    </div>
+    <div class="row">
+      <hr style="width: 100%;">
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet assumenda pariatur debitis ullam atque est,
+          quam, aliquid voluptates, alias soluta voluptate! Laboriosam, maxime quia. Magni odio voluptates sunt in quae.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi sunt laboriosam incidunt aut animi fuga
+          aperiam officia asperiores, quaerat dignissimos est, velit accusantium qui, nam optio? Deserunt sequi
+          excepturi quis, minima corporis modi culpa ipsum velit necessitatibus explicabo molestias! Repudiandae debitis
+          molestiae dicta autem, architecto expedita error nihil laborum veniam magnam aliquam deserunt, sint voluptate?
+          Adipisci soluta dicta hic vitae minima autem repudiandae ea dignissimos, vero debitis, obcaecati, omnis
+          corrupti repellendus voluptates similique! Mollitia delectus quam non, dolor, necessitatibus pariatur tenetur
+          porro, ea eaque maiores repellendus voluptas iusto consequuntur deserunt reiciendis sapiente. Quia atque ad
+          repudiandae, porro facere rerum voluptatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet eum ab, similique, inventore consequatur
+          deleniti id voluptatum culpa dolores autem accusamus deserunt saepe exercitationem cumque assumenda? In earum
+          amet, necessitatibus nesciunt impedit dolores voluptatibus neque corporis saepe? Maiores quod, quia sit itaque
+          expedita sunt cumque eaque impedit consequuntur cum alias ipsam pariatur eos eveniet iure facere debitis,
+          architecto distinctio iste dolore ut. Sed nihil molestiae sapiente optio sunt reprehenderit dolore
+          necessitatibus, nam fugiat sequi consequuntur perspiciatis recusandae laboriosam inventore aut doloremque
+          debitis voluptatem! Nemo, maxime quis accusantium nam eaque quam architecto culpa odit est ex voluptatibus
+          explicabo doloremque ea fugit obcaecati delectus omnis sed modi quae non minima eligendi corrupti! Vero
+          consequuntur fugit ut voluptas pariatur facilis! Doloribus molestiae quo quod voluptate, ullam dolores aliquid
+          vitae, expedita laboriosam ut hic reiciendis provident molestias officia nam impedit nemo velit sequi.
+          Laudantium fugit vel repellendus nihil sit qui repudiandae culpa perferendis alias, porro eveniet facere
+          quibusdam iste facilis? Praesentium, eos saepe. Fuga aliquam reprehenderit odio consequuntur tenetur, enim
+          cum, consequatur ratione asperiores vitae quia ad dolore. Minima consectetur voluptatum ea officia! Vel illo
+          dolorem omnis dicta nobis ex, quis dignissimos veniam et error illum, doloribus nesciunt atque maiores amet
+          velit modi!</p>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.js"></script>
 </body>
+
 </html>
