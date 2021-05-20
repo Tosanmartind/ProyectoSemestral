@@ -158,19 +158,24 @@ $(document).ready(function () {
 
     });
     //VALIDACIÓN CONSULTA-RECLAMO
-    $("#form2").submit(function () {
-        console.log("Submit")
+    $("#error-consulta").hide()
 
-        var text = $("#consulta").val()
+    $("#consulta").blur(function () {
+        console.log("consulta perdió el foco")
 
-        if (text.length < 50) {
+
+        if ($("#consulta").val().length < 50) {
             $("#error-consulta").html("Debe tener más de 50 caracteres")
-            event.preventDefault()
+            $("#error-consulta").fadeIn()
         }
 
 
     });
 
+    $("#consulta").focus(function () {
+        console.log("consulta ganó el foco")
+        $("#error-consulta").fadeOut()
+    });
 
 });
 
