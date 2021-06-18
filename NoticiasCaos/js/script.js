@@ -1,5 +1,39 @@
 $(document).ready(function () {
 
+    $("#buscar").click(function () {
+        $.getJSON(
+            'https://api.xor.cl/sismo/', //URL API
+            function (data) {  //QUE HACER CON LOS DATOS
+            //Cargar monedas al combobox
+                $.each(data, function (i, item) {
+                    const myObjStr = JSON.stringify(item.magnitudes);
+
+                    console.log(myObjStr.substring(14,15));
+
+
+                    if (myObjStr.substring(14,15)==','){
+                        grados = myObjStr.substring(13,14)
+                        }else{
+                            grados = myObjStr.substring(13,16)
+                        }
+
+                    
+                    $("#sismos").append(
+                         
+                        "<tr><td>"+item.fechaLocal+"</td>"+
+                        "<td>"+item.geoReferencia+"</td>"+
+                        "<td>"+grados+"° Celsius"+"</td>"+
+                        "<td><img src='"+item.imagen+"'>"+"</td>"
+                );
+            })
+
+            
+        }
+    );
+
+    
+});
+
     $("#error-usuario").hide()
 
     $("#inicio-correo").blur(function () {
